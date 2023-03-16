@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="clickbtn()">click</button>
+<p id="result"></p>
+<script>
+    let caro = []
+    let result = document.getElementById('result')
+    for (let i = 0; i < 5; i++) {
+        caro[i] = new Array(0,0,0,0,0)
+        result.innerHTML += caro[i].join(' ') + '<br>'
+    }
+    function clickbtn() {
+        let x = +prompt('nhap hang')
+        let y = +prompt('nhap cot')
+        if ((x>0&&x<5)||(y>0&&y<5)){
+        result.innerHTML = '';
+        caro[x][y] = 'x';
+        for (let j = 0; j < 5; j++) {
+            result.innerHTML += caro[j].join(' ') + '<br>'
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
